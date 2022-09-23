@@ -2,9 +2,9 @@ name: test
 
 on:
   push:
-    branches: [ master, next ]
+   # branches: [ master, next ]
   pull_request:
-    branches: [ master, next ]
+   # branches: [ master, next ]
 
 jobs:
   setup:
@@ -41,6 +41,6 @@ jobs:
         with:
           files: coverage/coverage-final.json
           flags: unittests,${{ matrix.os }}
-          name: fly-helper
+          name: toolsJS
           fail_ci_if_error: true
           verbose: true
